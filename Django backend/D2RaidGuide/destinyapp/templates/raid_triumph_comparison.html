@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Raid Triumph Comparison</title>
+</head>
+<body>
+    <h1>Raid Triumph Comparison</h1>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>Raid Triumphs</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for username, triumphs in raid_triumphs.items %}
+                <tr>
+                    <td>{{ username }}</td>
+                    <td>
+                        <ul>
+                            {% for triumph in triumphs %}
+                                <li>{{ triumph }}</li>
+                            {% endfor %}
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
