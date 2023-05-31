@@ -72,6 +72,29 @@
   <form action="./Raid Guides/GOS.html">
     <input type="submit" value="Garden of Salvation" />
   </form>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD4i2fmx5dcSyMGF_-h2dlTBFaksnDXnzw",
+      authDomain: "d2raidguide.firebaseapp.com",
+      projectId: "d2raidguide",
+      storageBucket: "d2raidguide.appspot.com",
+      messagingSenderId: "904938677835",
+      appId: "1:904938677835:web:e6b3e62a00d398c1a10fce",
+      measurementId: "G-Q8ZEJKXT5M"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
 </body>
 
 </html>

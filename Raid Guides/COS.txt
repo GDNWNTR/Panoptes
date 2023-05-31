@@ -1,0 +1,66 @@
+Crown of Sorrow
+ 
+Menagerie
+ 
+The objective is to dispel the Hive ward
+The encounter begins when players stand in the large green circle and neutralize the “Blessed Knight Splinter” Hive Knights
+Standing in the green circle grants players the “Witch’s Blessing” buff that lasts 60 seconds
+Once Witch’s Blessing expires, players will receive the “Witch’s Curse” debuff that lasts 3 seconds and will kill them unless they utilize the “Witch’s Vessel”
+The Witch’s Blessing buff allows players to only damage “Blessed” enemies
+Players without Witch’s Blessing can only damage normal enemies
+Using the Witch’s Vessel, the team can control which players have Witch’s Blessing by destroying the sphere on top of the artifact near the front of the room
+In order to utilize the Witch’s Vessel artifact and exchange Witch’s Blessing there must be at least one player with the buff and another player without it standing inside the purple circle
+Blessed enemies and normal enemies will spawn throughout the area during each wave
+Six Blessed Knight Splinter Hive Knights will spawn during each phase as well as two “Gahlran’s Retainer” Hive Ogres. Three of the Knights and one of the Ogres will be Blessed
+Three crystals will also spawn throughout the area and require two players, one with Witch’s Blessing and another without it to destroy each crystal before they turn green kill the team
+The cycle repeats until the fourth wave is complete
+The first chest spawns on the other side of the chasm
+ 
+Menagerie Depths  
+ 
+The objective is to navigate the jumping puzzle while destroying crystals and utilizing the Witch’s Vessel
+Players will need to utilize Witch’s Blessing to destroy each crystal
+Some crystals will spawn inside bubbles that are immune to damage, these crystals can only be destroyed when shot from inside
+Destroying crystals will spawn more pistons leading to the next encounter
+The second chest spawns once all crystals are destroyed
+ 
+Kingdom of Sorrow
+ 
+The objective is to neutralize the deceptions
+The encounter begins once any player melee strikes a deception
+The area is divided into three sections
+Three “Gahlran’s Deception’s” will spawn, one in each section
+Two will be decoys, one will be real
+Once the encounter begins, green barriers on the ground will divide the area into three sections preventing players from leaving their section
+“Revenant Wizards” and other enemies will spawn in each section
+A green circle will randomly spawn in one of the three sections. Players can stand in the circle and get Witch’s Blessing allowing them to neutralize Blessed enemies
+Once the Revenant Wizards are killed, “Gahlran’s Retainer” Ogres will spawn
+After all three Gahlran’s Retainer Ogres are eliminated, a Witch’s Vessel will spawn
+The Witch’s Vessel will spawn on one of the green barriers dividing the area into sections, allowing the team to transfer Witch’s Blessing between sections
+Once the Witch’s Blessing buff is transferred, the green barrier it spawned on will disappear
+The players with the real Gahlran’s Deception in their section will be the last to receive Witch’s Blessing
+The team should meet at the third Witch’s Vessel to either switch or receive Witch’s Blessing
+The shield around Gahlran’s Deception can only be neutralized when a player with Witch’s Blessing and a player without it melee strike it at the same time
+Melee striking Gahlran’s Deception will consume Witch’s Blessing
+Once Gahlran’s Deception’s shield is neutralized the damage phase begins
+When Gahlran’s Deception’s shield returns another player with Witch’s Blessing can melee strike it to disable it and start another damage phase
+The cycle repeats until Gahlran’s Deception is defeated
+The third chest spawns near the centre pillar
+ 
+Ghalran
+ 
+The objective is to identify and defeat the real Gahlran
+The encounter begins when a player shoots Gahlran
+Gahlran will spawn two additional decoys
+A large green circle will spawn in one section, where players acquire Witch’s Blessing
+Enemies including Blessed Knight Splinter Hive Knights will spawn in each section
+A crystal inside a bubble will spawn in one section, when destroyed it will spawn in another section shortly thereafter
+After three waves of enemies Gahlran will summon two Gahlran’s Retainer Ogres and one Gahlran’s Deception
+Players with Gahlran’s Deception should melee strike it’s shield and stun it
+Gahlran will slowly raise his glowing green hands into the air. When players shoot his hands, he will smash his axe killing the deception
+Once the last Gahlran’s Deception is neutralized all three Gahlran’s will slowly raise their glowing green hands into the air
+The decoys are identified when, after shooting both their hands and heads they disappear
+The real Gahlran will prepare an “Ontological Weapon” that will wipe the team unless he is stunned
+The team needs to stun Gahlran multiple times during the damage phase
+The cycle repeats until Gahlran is defeated!
+

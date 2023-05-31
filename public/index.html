@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="shortcut icon" href="/public/assets/raidicon.png" />
+  <title>Panoptes Raid Guides</title>
+  <style>
+    body {
+        background-color: rgb(35, 32, 32);
+        /* background-image: linear-gradient(135deg, rgba(59, 56, 56, 0.5), rgba(255, 255, 255, 0.5)),
+            url("assets/vault_of_glass.webp");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover; */
+
+    }
+
+    h1 {
+        color: rgb(212, 245, 24);
+    }
+
+    p {
+        color: rgb(255, 255, 255);
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        color: #d10707;
+    }
+
+    td,
+    th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+</style>
+</head>
+
+<body>
+  <h1>Panoptes Raid Guides</h1>
+  <p>Click the Links below for the raid guide you wish to read</p>
+  <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_root_of_nightmares.jpg">
+  <form action="./Raid Guides/RON.html">
+    <input type="submit" value="Root of Nightmares" />
+  </form>
+  <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_nemesis.jpg">
+  <form action="./Raid Guides/VoD.html">
+    <input type="submit" value="Vow of the Disciple" />
+  </form>
+  <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_kings_fall.jpg">
+  <form action="./Raid Guides/KF.html">
+    <input type="submit" value="King's Fall" />
+  </form>
+  <img src="https://www.bungie.net/img/destiny_content/pgcr/vault_of_glass.jpg">
+  <form action="./Raid Guides/vogguide.html">
+    <input type="submit" value="Vault of Glass" />
+  </form>
+  <img src="https://www.bungie.net/img/destiny_content/pgcr/europa-raid-deep-stone-crypt.jpg">
+  <form action="./Raid Guides/DSC.html">
+    <input type="submit" value="Deep Stone Crypt" />
+  </form>
+  <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_garden_of_salvation.jpg">
+  <form action="./Raid Guides/GOS.html">
+    <input type="submit" value="Garden of Salvation" />
+  </form>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyD4i2fmx5dcSyMGF_-h2dlTBFaksnDXnzw",
+      authDomain: "d2raidguide.firebaseapp.com",
+      projectId: "d2raidguide",
+      storageBucket: "d2raidguide.appspot.com",
+      messagingSenderId: "904938677835",
+      appId: "1:904938677835:web:e6b3e62a00d398c1a10fce",
+      measurementId: "G-Q8ZEJKXT5M"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+</body>
+
+</html>
