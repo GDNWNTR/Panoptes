@@ -6,9 +6,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <link rel="shortcut icon" href="/public/assets/raidicon.png" />
   <title>Panoptes Raid Guides</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
   <style>
     body {
-      background-color: rgb(35, 32, 32);
+      background-color: rgba(13, 27, 42, 1); 
       /* background-image: linear-gradient(135deg, rgba(59, 56, 56, 0.5), rgba(255, 255, 255, 0.5)),
             url("assets/vault_of_glass.webp");
         background-repeat: no-repeat;
@@ -17,32 +21,62 @@
 
     }
 
+    .topnav {
+      overflow: hidden;
+      background-color: rgba(65, 90, 119, 1);
+    }
+
+    .topnav a {
+      float: left;
+      color: rgba(22, 25, 22, 1);
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 17px;
+    }
+
+    .topnav a:hover {
+      background-color: rgba(22, 25, 22, 1);
+      color: black;
+    }
+
+    .topnav a.active {
+      background-color: rgba(224, 225, 221, 1);
+      color: rgba(22, 25, 22, 1);
+    }
+
     .container {
       position: relative;
+      border-color: #882121;
+      max-width: 100%;
     }
 
     .bottom-image {
       display: block;
-      width: 75%;
+      width: 60vw;
     }
 
     .top-image {
       position: absolute;
       top: 0;
       left: 0;
-      max-width: 100%;
+      max-width: 30%;
     }
 
     h1 {
-      color: rgb(6, 194, 236);
+      color: rgba(224, 225, 221, 1);
+      font-family: 'Space Grotesk', sans-serif;
     }
 
     h3 {
-      color: rgb(6, 194, 236)
+      color: rgba(224, 225, 221, 1);
+      font-family: 'Space Grotesk', sans-serif;
     }
 
     p {
-      color: rgb(255, 255, 255);
+      color: rgba(224, 225, 221, 1);
+      font-family: 'Space Grotesk', sans-serif;
     }
 
     table {
@@ -50,6 +84,7 @@
       border-collapse: collapse;
       width: 100%;
       color: #d10707;
+      font-family: 'Space Grotesk', sans-serif;
     }
 
     td,
@@ -57,6 +92,7 @@
       border: 1px solid #ddddddbb;
       text-align: left;
       padding: 8px;
+      font-family: 'Space Grotesk', sans-serif;
     }
 
     tr:nth-child(even) {
@@ -66,24 +102,28 @@
 </head>
 
 <body>
-  <h1>Panoptes Raid Guides</h1>
-  <h3>by Arm's Raid Group</h3>
-  <p>Click the Links below for the raid guide you wish to read</p>
+  <div class="topnav">
+    <a class="active" href="#home">Home</a>
+    <a href="#news">News</a>
+    <a href="./Contact.html">Contact</a>
+    <a href="./help.html">Help</a>
+  </div>
+
+  <div style="padding-left:16px">
+    <h1>Panoptes</h1>
+    <h3>by Arm's Raid Group</h3>
+  </div>
+
 
   <!-- Root of Nightmares-->
-  <div class="container">
+  <a href="./Raid Guides/RON.html" class="container" style="
+    display: block;
+  ">
     <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_root_of_nightmares.jpg" alt="Image 1"
       class="bottom-image">
     <img src="/assets/RON/RootofNightmares_Raid.png" alt="Image 2" class="top-image">
-  </div>
-  <!-- <a href="./Raid Guides/RON.html">
-    <img src="/assets/RON/RootofNightmares_Raid.png" alt="Button">
+
   </a>
-  <div class="linktreeone">
-  <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_root_of_nightmares.jpg"> -->
-  <form action="./Raid Guides/RON.html">
-    <input type="submit" value="Root of Nightmares" />
-  </form>
 
   <!-- Vow of the Disciple-->
   <div class="container">
@@ -94,7 +134,7 @@
     <input type="submit" value="Vow of the Disciple" />
   </form>
 
-<!-- King's Fall-->
+  <!-- King's Fall-->
   <div class="container">
     <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_kings_fall.jpg" alt="Image 1" class="bottom-image">
     <img src="/assets/KF/KingsFall_Raid.png" alt="Image 2" class="top-image">
@@ -114,7 +154,8 @@
 
   <!-- Deep Stone Crypt-->
   <div class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/europa-raid-deep-stone-crypt.jpg" alt="Image 1" class="bottom-image">
+    <img src="https://www.bungie.net/img/destiny_content/pgcr/europa-raid-deep-stone-crypt.jpg" alt="Image 1"
+      class="bottom-image">
     <img src="/assets/DSC/9d6744eed9fa9b55f8190ce975f1872d rezied.png" alt="Image 2" class="top-image">
   </div>
   <form action="./Raid Guides/DSC.html">
@@ -122,7 +163,7 @@
   </form>
 
 
-<!-- Garden of Salvation-->
+  <!-- Garden of Salvation-->
   <div class="container">
     <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_garden_of_salvation.jpg" alt="Image 1"
       class="bottom-image">
@@ -147,7 +188,7 @@
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.1/firebase-analytics.js";
     // TODO: Add SDKs for Firebase products that you want to use
     // https://firebase.google.com/docs/web/setup#available-libraries
-  
+
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     const firebaseConfig = {
@@ -159,7 +200,7 @@
       appId: "1:904938677835:web:e6b3e62a00d398c1a10fce",
       measurementId: "G-Q8ZEJKXT5M"
     };
-  
+
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
