@@ -1,0 +1,50 @@
+Spire of Stars
+ 
+Statue Garden
+ 
+-          The objective is to deposit a charged orb into the centre well three times
+-          The encounter begins once players throw the first orb into the well
+-          There are four pillars that the team will need to raise to unlock the barrier protecting the well
+-          The players can raise the pillars by standing on them with the orb
+-          Standing on a pillar with the orb grants a debuff called “Greed”. Greed will kill players if it reaches x11
+-          If a player stands on a pillar without the orb they will receive the “Engulfed” debuff. Engulfed will kill a player when the timer reaches 0 secs  
+-          The team will need to collect the orb, raise a pillar and then pass the orb to the next player to raise the next pillar until all four pillars are raised and the barrier protecting the well is unlocked
+-          Once players raise a pillar, they will slowly descend back down  
+-          Once the barrier is unlocked the last player on a pillar can throw the orb into the well
+-          The first chest will spawn behind the well
+ 
+Celestial Observatory
+ 
+-          The goal is to neutralize the three Cabal ships outside the observatory
+-          There are four large plates in the back of the room that will activate a teleporter in the centre of the room on the main platform
+-          Surrounding the main platform are three smaller plates that will charge the orb
+-          Below the main platform are three rooms each with a symbol (square, circle and triangle) in from of them
+-          To start the encounter the team should eliminate all the enemies in the area
+-          Four players should stand on the large plates and activate the teleporter
+-          A three random players will receive the “Superior Retainer” buff that will allow them to travel through the teleporter
+-          The player that travels through the teleporter will see a symbol (square, circle or triangle) above one of the ships
+-          Once the team determines which symbol plate to arm, one player should collect an orb and Engulf it using one of the smaller plates near the teleporter
+-          Three players will need to stand on and activate all three of the symbol plates to open the doors so that the player with the orb can throw it at the correct power node
+-          Any player with Superior Retainer should collect the orb, Engulf the orb on one of the charge plates then travel through the teleporter and neutralize the correct ship
+-          The cycle repeats until all three ships have been destroyed
+-          The second chest spawns near the entrance
+ 
+Val Ca’uor
+ 
+-          An orb will spawn on one of the four large plates
+-          The team must collect the orb and pass it between each player before the debuff reaches 0 secs
+-          The final encounter begins once the last player to collect the orb throws it at Val Ca’uor
+-          Once Val Ca’our’s shield is neutralized three random players will receive Superior Retainer
+-          Four “Honored Gladiator” will spawn on the large plates
+-          The team should then stand on the four large plates, activate the teleport and have one player with the Superior Retainer travel through
+-          The player travelling through the teleporter will see two symbols (square, circle or triangle)
+-          Two orbs will spawn near the large plates, two players can collect and Engulf the orbs at the charge plates while the rest of the team activates the symbol plates
+-          The players with the orbs should go to the correct symbol plates and throw their orbs to activate the power nodes
+-          The team should then activate the four large plates while two players with Superior Retainer collect orbs Engulf them and travel through the teleporter to destroy the ships
+-          Two more orbs will spawn, players should Engulf them at the charge plates and pass them amongst the group until a third additional orb spawns
+-          Once the third orb is Engulfed, all three players should hold on to them and pass them amongst the group when necessary until the Calus robot begins to levitate in the air and a purple light starts to shine from his hand
+-          To begin the final damage phase players with the Engulfed orbs should try and throw all three orbs at the same time at purple light on the Calus robot’s hand
+-          The entire cycle will repeat until Val Ca’uor initiates a final stand and six orbs spawn, the team should collect and throw them at Val Ca’uor to neutralize him
+-          The final chest spawns on the upper platform 
+
+
