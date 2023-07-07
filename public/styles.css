@@ -1,0 +1,128 @@
+    body {
+        background-color: rgba(13, 27, 42, 1);
+    }
+    .imagetextblock {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: rgba(0, 0, 0, 0.4);
+        color: rgba(22, 25, 22, 1);
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 34px;
+        max-width: 60vw;
+    }
+    .topnav {
+        overflow: hidden;
+        background-color: rgba(65, 90, 119, 1);
+    }
+
+    .topnav a {
+        float: left;
+        color: rgba(22, 25, 22, 1);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: rgba(22, 25, 22, 1);
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: rgba(224, 225, 221, 1);
+        color: rgba(22, 25, 22, 1);
+    }
+
+    /* Bottom left text */
+    .bottom-left {
+        position: absolute;
+        bottom: 8px;
+        left: 16px;
+    }
+
+    /* Top left text */
+    .top-left {
+        position: absolute;
+        top: 8px;
+        left: 16px;
+    }
+
+    /* Top right text */
+    .top-right {
+        position: absolute;
+        top: 8px;
+        right: 16px;
+    }
+
+    /* Bottom right text */
+    .bottom-right {
+        position: absolute;
+        bottom: 8px;
+        right: 16px;
+    }
+
+    /* Centered text */
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .container {
+        position: relative;
+        border-color: #882121;
+        max-width: 60%;
+    }
+
+    .bottom-image {
+        display: block;
+        width: 60vw;
+    }
+
+    .top-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 30%;
+        max-height: 40%;
+    }
+
+    h1 {
+        color: rgba(224, 225, 221, 1);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    h3 {
+        color: rgba(224, 225, 221, 1);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    p {
+        color: rgba(224, 225, 221, 1);
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        color: #d10707;
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    td,
+    th {
+        border: 1px solid #ddddddbb;
+        text-align: left;
+        padding: 8px;
+        font-family: 'Space Grotesk', sans-serif;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
