@@ -1,6 +1,11 @@
     body {
         background-color: rgba(13, 27, 42, 1);
     }
+
+    * {
+        box-sizing: border-box;
+      }
+      
     .imagetextblock {
         position: absolute;
         bottom: 20px;
@@ -127,3 +132,21 @@
     tr:nth-child(even) {
         background-color: #dddddd;
     }
+
+    .imagetext {
+        position: relative;
+        /* max-width: 800px; */
+        margin: 0 auto;
+      }
+      
+      .imagetext img {vertical-align: middle;}
+      
+      .imagetext .content {
+        position: absolute;
+        bottom: 0;
+        background: rgb(0, 0, 0); /* Fallback color */
+        background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+        color: #f1f1f1;
+        max-width: 60%;
+        padding: 20px;
+      }
