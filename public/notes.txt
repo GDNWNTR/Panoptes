@@ -23,3 +23,149 @@ Sure, I can provide some example color codes for your color scheme. Here are som
 - Black (#000000), Orange (#FFA500), Yellow (#FFFF00), and White (#FFFFFF). This is a bright and energetic color scheme that evokes the sun, fire, and light.
 
 I hope these examples are helpful. You can use this website to generate more color schemes: https://coolors.co/ 😊
+
+
+
+kings fall
+Long live the King.
+
+vog
+Beneath Venus, evil stirs.
+
+DSC
+The chains of legacy must be broken.
+
+GOS
+The Garden calls out to you.
+
+LW
+The opportunity of a lifetime.
+
+COS
+Grow [weak] with [pride].
+
+lev
+Grow fat from strength.
+
+SOS
+On the wings of Icarus.
+
+EOW
+In the belly of the beast.
+
+SOTP
+Beneath the ruins of the Last City lies the Black Armory's
+most precious vault, now under siege by Siviks and his crew,
+the Kell's Scourge.
+
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Root of Nightmares</h1>
+        <p>A sinister threat has taken root.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Vow of the Disciple</h1>
+        <p>The disciple beckons...</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>King's Fall</h1>
+        <p>Long live the King.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Vault of Glass</h1>
+        <p>Beneath Venus, evil stirs.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Deep Stone Crypt</h1>
+        <p>The chains of legacy must be broken.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Garden of Salvation</h1>
+        <p>The Garden calls out to you.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Last Wish</h1>
+        <p>The opportunity of a lifetime.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Root of Nightmares</h1>
+        <p>A sinister threat has taken root.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Root of Nightmares</h1>
+        <p>A sinister threat has taken root.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Root of Nightmares</h1>
+        <p>A sinister threat has taken root.</p>
+    </div>
+</div>
+
+
+
+
+rbga(254, 249, 255)
+
+Gunmetal
+#2D3142
+
+GHost White
+#FEF9FF
+
+Florecenet Coral 
+#6FFFE9
+
+raisin black
+#342E37
+52
+46
+55
+
+Tuft Blue 
+#3C91E6
+60
+145
+230
+
+imperial red 
+#F03A47
+251
+54
+64
+
+Deep Black
+OC1618
+12
+22
+24
+
+
+A72608

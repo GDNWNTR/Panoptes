@@ -1,5 +1,6 @@
     body {
-        background-color: rgba(13, 27, 42, 1);
+        /* background-color: rgba(13, 27, 42, 1); */
+        background-color: rgba(12, 22, 24, 1);
     }
 
     * {
@@ -20,7 +21,8 @@
     }
     .topnav {
         overflow: hidden;
-        background-color: rgba(65, 90, 119, 1);
+        /* background-color: rgba(65, 90, 119, 1); */
+        background-color: rgba(52, 46, 55, 1);
     }
 
     .topnav a {
@@ -96,6 +98,7 @@
         left: 0;
         max-width: 30%;
         max-height: 40%;
+        height: 125px;
     }
 
     h1 {
