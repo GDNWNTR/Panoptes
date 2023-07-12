@@ -137,7 +137,7 @@ rbga(254, 249, 255)
 Gunmetal
 #2D3142
 
-GHost White
+Ghost White
 #FEF9FF
 
 Florecenet Coral 
@@ -161,6 +161,12 @@ imperial red
 54
 64
 
+Eerie black
+191919
+25
+25
+25
+
 Deep Black
 OC1618
 12
@@ -169,3 +175,30 @@ OC1618
 
 
 A72608
+
+
+color: rgb(251, 54, 64);
+
+color: rgba(224, 225, 221, 1);
+
+
+
+
+
+
+
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol> 
+
+
+
+
+
+
+
+
+
+
