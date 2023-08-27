@@ -1,3 +1,7 @@
+---
+marp: true
+---
+
 # Panoptes / D2 Raid Guide Project
 
 Destiny 2 Application meant to focus on comparing 6 Guardians at once and compiling lots of information for Destiny 2 Raids

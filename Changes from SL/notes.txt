@@ -1,0 +1,204 @@
+Sure, I can show you how to use these colors in your website design. Here are some mockups of how your website could look like with different color schemes:
+
+- Black, Gold, Silver, and Red:
+
+![A mockup of a website with a black background, a gold header with the logo and the slogan, a silver navigation bar with links to different pages, and a red banner with an image of a raid and some text.](https://i.imgur.com/1k7y9aT.png)
+
+- Black, Purple, Blue, and Green:
+
+![A mockup of a website with a black background, a purple header with the logo and the slogan, a blue navigation bar with links to different pages, and a green banner with an image of a raid and some text.](https://i.imgur.com/8Qw0YXG.png)
+
+- Black, Orange, Yellow, and White:
+
+![A mockup of a website with a black background, an orange header with the logo and the slogan, a yellow navigation bar with links to different pages, and a white banner with an image of a raid and some text.](https://i.imgur.com/2mZjx0U.png)
+
+I hope these mockups give you some inspiration for your website design. You can use this website to create your own mockups: https://www.mockplus.com/ 😊
+
+
+
+Sure, I can provide some example color codes for your color scheme. Here are some possible combinations:
+
+- Black (#000000), Gold (#FFD700), Silver (#C0C0C0), and Red (#FF0000). This is a classic and elegant color scheme that conveys prestige and power.
+- Black (#000000), Purple (#800080), Blue (#0000FF), and Green (#00FF00). This is a vibrant and dynamic color scheme that reflects the different elements and subclasses in Destiny 2.
+- Black (#000000), Orange (#FFA500), Yellow (#FFFF00), and White (#FFFFFF). This is a bright and energetic color scheme that evokes the sun, fire, and light.
+
+I hope these examples are helpful. You can use this website to generate more color schemes: https://coolors.co/ 😊
+
+
+
+kings fall
+Long live the King.
+
+vog
+Beneath Venus, evil stirs.
+
+DSC
+The chains of legacy must be broken.
+
+GOS
+The Garden calls out to you.
+
+LW
+The opportunity of a lifetime.
+
+COS
+Grow [weak] with [pride].
+
+lev
+Grow fat from strength.
+
+SOS
+On the wings of Icarus.
+
+EOW
+In the belly of the beast.
+
+SOTP
+Beneath the ruins of the Last City lies the Black Armory's
+most precious vault, now under siege by Siviks and his crew,
+the Kell's Scourge.
+
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Root of Nightmares</h1>
+        <p>A sinister threat has taken root.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Vow of the Disciple</h1>
+        <p>The disciple beckons...</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>King's Fall</h1>
+        <p>Long live the King.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Vault of Glass</h1>
+        <p>Beneath Venus, evil stirs.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Deep Stone Crypt</h1>
+        <p>The chains of legacy must be broken.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Garden of Salvation</h1>
+        <p>The Garden calls out to you.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Last Wish</h1>
+        <p>The opportunity of a lifetime.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Root of Nightmares</h1>
+        <p>A sinister threat has taken root.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Root of Nightmares</h1>
+        <p>A sinister threat has taken root.</p>
+    </div>
+</div>
+
+<div class="imagetext">
+    <div class="content">
+        <h1>Root of Nightmares</h1>
+        <p>A sinister threat has taken root.</p>
+    </div>
+</div>
+
+
+
+
+rbga(254, 249, 255)
+
+Gunmetal
+#2D3142
+
+Ghost White
+#FEF9FF
+
+Florecenet Coral 
+#6FFFE9
+
+raisin black
+#342E37
+52
+46
+55
+
+Tuft Blue 
+#3C91E6
+60
+145
+230
+
+imperial red 
+#F03A47
+251
+54
+64
+
+Eerie black
+191919
+25
+25
+25
+
+Deep Black
+OC1618
+12
+22
+24
+
+
+A72608
+9, 12, 2
+
+color: rgb(251, 54, 64);
+
+color: rgba(224, 225, 221, 1);
+
+
+
+
+
+
+
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol> 
+
+
+
+
+
+
+
+
+
+

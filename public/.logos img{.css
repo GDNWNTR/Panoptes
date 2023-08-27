@@ -1,0 +1,40 @@
+.logos img{
+    width: 15%;
+    aspect-ratio: 4/3;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
+}
+
+.glass {
+    background-color: #ffffff05;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(25px);
+}
+
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+
+
+h1::first-line {
+    color: aliceblue;
+}
+
+.content::first-letter {
+    font-size: 5.3rem;
+    font-weight: 900;
+    line-height: 1;
+    color: white;
+
+    padding: 0.8rem 1.2rem;
+    background: rgba(234, 68, 68, 1);
+
+    margin-right: 0.8rem;
+
+    float: left;
+}
