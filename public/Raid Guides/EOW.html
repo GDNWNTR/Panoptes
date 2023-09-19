@@ -9,13 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
+    <script src="../version.js"></script>
+    <script src="../stickytopnav.js"></script>
 </head>
 
 <body>
     <div class="topnav">
         <a class="active" href="./RON.html">Eater of Worlds</a>
         <a href="../index.html">Home</a>
-        <!-- <a href="./vogguide.html">Guides</a> -->
+        <a href="../tableocontents.html">Table of Contents</a>
         <a href="../Contact.html">Contact</a>
         <a href="../help.html">About</a>
     </div>
@@ -52,7 +54,15 @@
     <p>
         Some Text about the Boss Fight
     </p>
-
+    <footer>
+        <p>Author: <span id="author"></span></p>
+        <p>Version: <span id="version"></span></p>
+        <!-- <a href="mailto:Website@d2raidguide.com">Email the Webmaster</a></p> -->
+      </footer>
+      <script>
+        document.getElementById("version").textContent = version;
+        document.getElementById("author").textContent = author;
+      </script>
 </body>
 
 </html>

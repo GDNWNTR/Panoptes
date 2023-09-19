@@ -19,21 +19,91 @@ body {
   max-width: 60;
   max-height: 40%;
 }
-.topnav {
+
+/* ///////////////////////////// EXP1 - Adding text to Right side of navbar ///////////////////////// */
+
+.navbar {
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: left;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
   overflow: hidden;
+  text-align: center;
   /* background-color: rgba(65, 90, 119, 1); */
-  background-color: rgba(52, 46, 55, 1);
+  background-color: rgb(218, 216, 219);
+}
+
+.navbar a {
+  float: left;
+  /* color: rgba(22, 25, 22, 1); */
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-justify: auto;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 17px;
+}
+
+/* Define styles for the sticky navigation bar */
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navbar a:hover {
+  background-color: rgba(22, 25, 22, 1);
+  color: rgba(224, 225, 221, 1);
+}
+
+.navbar a.active {
+  background-color: rgb(0, 0, 0);
+  color: rgb(176, 253, 176);
+}
+
+.navbar img {
+  height: 70px;
+
+}
+
+
+
+/* ///////////////////////////// Top Navigation Bar ///////////////////////// */
+.topnav {
+  display: flex;
+  /* Use flexbox for layout */
+  justify-content: left;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  overflow: hidden;
+  text-align: center;
+  /* background-color: rgba(65, 90, 119, 1); */
+  background-color: rgb(218, 216, 219);
 }
 
 .topnav a {
   float: left;
   /* color: rgba(22, 25, 22, 1); */
-  color: rgb(251, 54, 64);
+  color: rgb(0, 0, 0);
   text-align: center;
+  text-justify: auto;
   padding: 14px 16px;
   text-decoration: none;
   font-family: "Space Grotesk", sans-serif;
   font-size: 17px;
+}
+
+/* Define styles for the sticky navigation bar */
+.topnav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
 }
 
 .topnav a:hover {
@@ -42,9 +112,17 @@ body {
 }
 
 .topnav a.active {
-  background-color: rgba(224, 225, 221, 1);
-  color: rgba(22, 25, 22, 1);
+  background-color: rgb(0, 0, 0);
+  color: rgb(176, 253, 176);
 }
+
+.topnav img {
+  height: 70px;
+
+}
+
+
+/* ///////////////////////////// Pic Text ///////////////////////// */
 
 /* Bottom left text */
 .bottom-left {
@@ -148,6 +226,7 @@ td:hover {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
 /* table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -181,8 +260,10 @@ tr:nth-child(even) {
 .imagetext .content {
   position: absolute;
   bottom: 0;
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  background: rgb(0, 0, 0);
+  /* Fallback color */
+  background: rgba(0, 0, 0, 0.5);
+  /* Black background with 0.5 opacity */
   color: #f1f1f1;
   max-width: 60%;
   padding: 20px;

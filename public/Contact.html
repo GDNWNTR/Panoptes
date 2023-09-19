@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="shortcut icon" href="/public/assets/raidicon.png" />
+  <link rel="shortcut icon" href="./assets/raidicon.png" />
   <title>Panoptes Raid Guides - Contact</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
+  <script src="version.js"></script>
+  <script src="stickytopnav.js"></script>
 </head>
 
 <body>
@@ -35,10 +36,13 @@
   </div>
 
   <footer>
-    <p>Author: ARMAG1DE0N#1016<br>
-      Version: 1.0.0</p>
+    <p>Author: <span id="author"></span></p>
+    <p>Version: <span id="version"></span></p>
     <!-- <a href="mailto:Website@d2raidguide.com">Email the Webmaster</a></p> -->
   </footer>
-</body>
+  <script>
+    document.getElementById("version").textContent = version;
+    document.getElementById("author").textContent = author;
+  </script>
 
 </html>

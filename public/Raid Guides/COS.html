@@ -9,15 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
+    <script src="../version.js"></script>
+    <script src="../stickytopnav.js"></script>
 </head>
 
 <body>
     <div class="topnav">
         <a class="active" href="./RON.html">Crown of Sorrow</a>
         <a href="../index.html">Home</a>
-        <!-- <a href="./vogguide.html">Guides</a> -->
+        <a href="../tableocontents.html">Table of Contents</a>
         <a href="../Contact.html">Contact</a>
-        <a href="../help.html">About</a>
+        <a href="../help.html">Help</a>
+
     </div>
 
     <div>
@@ -90,7 +93,15 @@ The decoys are identified when, after shooting both their hands and heads they d
 The real Gahlran will prepare an “Ontological Weapon” that will wipe the team unless he is stunned
 The team needs to stun Gahlran multiple times during the damage phase
 The cycle repeats until Gahlran is defeated!</p>
-
+<footer>
+    <p>Author: <span id="author"></span></p>
+    <p>Version: <span id="version"></span></p>
+    <!-- <a href="mailto:Website@d2raidguide.com">Email the Webmaster</a></p> -->
+  </footer>
+  <script>
+    document.getElementById("version").textContent = version;
+    document.getElementById("author").textContent = author;
+  </script>
 </body>
 
 </html>

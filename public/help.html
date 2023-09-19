@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="shortcut icon" href="/public/assets/raidicon.png" />
+  <link rel="shortcut icon" href="./assets/raidicon.png" />
   <title>Panoptes Raid Guides - Help</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="version.js"></script>
 </head>
 
 <body>
@@ -25,17 +26,19 @@
     <h1>Help</h1>
     <p>There is no help here.</p>
   </div>
-  
-  <script>
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
-  </script>
+  <div>
+    <h3>Just kidding...</h3>
+
+  </div>
+<footer>
+  <p>Author: <span id="author"></span></p>
+  <p>Version: <span id="version"></span></p>
+
+</footer>
+<script>
+  document.getElementById("version").textContent = version;
+  document.getElementById("author").textContent = author;
+</script>
 
 </body>
 
