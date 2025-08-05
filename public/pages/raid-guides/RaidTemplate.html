@@ -1,0 +1,602 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta
+            name="description"
+            content="Complete guide for [RAID_NAME] raid in Destiny 2. Encounter strategies, triumph requirements, and loot information."
+        />
+        <meta
+            name="keywords"
+            content="Destiny 2, [RAID_NAME], raid guide, encounters, triumphs, loot"
+        />
+        <meta name="author" content="Arm's Raid Group" />
+
+        <link rel="shortcut icon" href="../assets/raidicon.png" />
+        <title>[RAID_NAME] - Panoptes Raid Guide</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="../styles.css" />
+
+        <style>
+            /* Additional styles specific to raid guide pages */
+            .raid-hero {
+                position: relative;
+                height: 60vh;
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+                    url("[RAID_BACKGROUND_IMAGE]") center/cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                overflow: hidden;
+            }
+
+            .raid-hero::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+                opacity: 0.3;
+            }
+
+            .raid-hero-content {
+                position: relative;
+                z-index: 2;
+                max-width: 800px;
+                padding: 2rem;
+            }
+
+            .raid-hero h1 {
+                font-size: clamp(3rem, 8vw, 5rem);
+                margin-bottom: 1rem;
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+                color: var(--accent-gold);
+            }
+
+            .raid-hero .tagline {
+                font-size: clamp(1.2rem, 3vw, 1.8rem);
+                margin-bottom: 2rem;
+                opacity: 0.9;
+                font-weight: 300;
+            }
+
+            .raid-info {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            .info-item {
+                background: rgba(0, 0, 0, 0.7);
+                padding: 1rem;
+                border-radius: 10px;
+                text-align: center;
+                border: 1px solid var(--border-color);
+            }
+
+            .info-item h3 {
+                color: var(--accent-gold);
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .info-item p {
+                margin: 0;
+                font-weight: 500;
+            }
+
+            .content-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 2rem;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+
+            .encounter-card {
+                background: var(--secondary-bg);
+                border-radius: 15px;
+                overflow: hidden;
+                border: 1px solid var(--border-color);
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            .encounter-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+                border-color: var(--accent-gold);
+            }
+
+            .encounter-image {
+                position: relative;
+                height: 200px;
+                overflow: hidden;
+            }
+
+            .encounter-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            .encounter-card:hover .encounter-image img {
+                transform: scale(1.05);
+            }
+
+            .encounter-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(
+                    45deg,
+                    rgba(0, 0, 0, 0.3),
+                    transparent 70%
+                );
+                display: flex;
+                align-items: flex-end;
+                padding: 1rem;
+            }
+
+            .encounter-number {
+                background: var(--accent-gold);
+                color: var(--primary-bg);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+
+            .encounter-content {
+                padding: 1.5rem;
+            }
+
+            .encounter-content h2 {
+                color: var(--accent-gold);
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+            }
+
+            .encounter-content p {
+                margin-bottom: 1rem;
+                line-height: 1.6;
+                opacity: 0.9;
+            }
+
+            .encounter-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .tag {
+                background: rgba(244, 208, 63, 0.2);
+                color: var(--accent-gold);
+                padding: 0.3rem 0.8rem;
+                border-radius: 20px;
+                font-size: 0.8rem;
+                font-weight: 500;
+                border: 1px solid rgba(244, 208, 63, 0.3);
+            }
+
+            .encounter-details {
+                list-style: none;
+                padding: 0;
+            }
+
+            .encounter-details li {
+                padding: 0.5rem 0;
+                border-bottom: 1px solid var(--border-color);
+                display: flex;
+                align-items: center;
+            }
+
+            .encounter-details li:last-child {
+                border-bottom: none;
+            }
+
+            .encounter-details li::before {
+                content: "→";
+                color: var(--accent-gold);
+                font-weight: bold;
+                margin-right: 0.5rem;
+            }
+
+            .section-title {
+                text-align: center;
+                font-size: 2.5rem;
+                color: var(--accent-gold);
+                margin: 3rem 0 2rem 0;
+                position: relative;
+            }
+
+            .section-title::after {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 3px;
+                background: var(--accent-gold);
+                margin: 1rem auto;
+                border-radius: 2px;
+            }
+
+            .triumph-section {
+                background: var(--secondary-bg);
+                margin: 4rem -2rem;
+                padding: 3rem 2rem;
+                border-top: 1px solid var(--border-color);
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .loot-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .loot-item {
+                background: var(--secondary-bg);
+                border-radius: 10px;
+                padding: 1.5rem;
+                border: 1px solid var(--border-color);
+                text-align: center;
+                transition: all 0.3s ease;
+            }
+
+            .loot-item:hover {
+                border-color: var(--accent-gold);
+                transform: translateY(-2px);
+            }
+
+            .loot-item img {
+                width: 64px;
+                height: 64px;
+                margin-bottom: 1rem;
+                border-radius: 8px;
+            }
+
+            .back-button {
+                position: fixed;
+                top: 100px;
+                left: 2rem;
+                background: rgba(26, 31, 46, 0.9);
+                color: var(--text-primary);
+                padding: 0.8rem 1.2rem;
+                border-radius: 25px;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                border: 1px solid var(--border-color);
+                backdrop-filter: blur(10px);
+                z-index: 100;
+            }
+
+            .back-button:hover {
+                background: var(--accent-gold);
+                color: var(--primary-bg);
+                transform: translateX(-5px);
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .content-grid {
+                    grid-template-columns: 1fr;
+                    padding: 1rem;
+                }
+
+                .raid-hero {
+                    height: 40vh;
+                }
+
+                .raid-info {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .back-button {
+                    position: static;
+                    display: inline-block;
+                    margin: 1rem;
+                }
+
+                .triumph-section {
+                    margin: 2rem -1rem;
+                    padding: 2rem 1rem;
+                }
+            }
+        </style>
+
+        <!-- Scripts -->
+        <script src="../version.js" defer></script>
+        <script src="../navigation.js" defer></script>
+    </head>
+
+    <body>
+        <!-- Back Button -->
+        <a href="../index.html" class="back-button">← Back to Raids</a>
+
+        <!-- Navigation -->
+        <nav class="topnav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html">Home</a>
+            <a href="../tableocontents.html">Table of Contents</a>
+            <a href="../Contact.html">Contact</a>
+            <a href="../help.html">Help</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <header class="raid-hero">
+                <div class="raid-hero-content">
+                    <h1>[RAID_NAME]</h1>
+                    <p class="tagline">[RAID_TAGLINE]</p>
+
+                    <div class="raid-info">
+                        <div class="info-item">
+                            <h3>Players</h3>
+                            <p>6</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Power Level</h3>
+                            <p>[POWER_LEVEL]</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Length</h3>
+                            <p>[RAID_LENGTH]</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Difficulty</h3>
+                            <p>[DIFFICULTY]</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Encounters Section -->
+            <section class="encounters-section">
+                <h2 class="section-title">Encounters</h2>
+
+                <div class="content-grid">
+                    <!-- Entrance/Opening -->
+                    <div class="encounter-card">
+                        <div class="encounter-image">
+                            <img
+                                src="[ENCOUNTER_1_IMAGE]"
+                                alt="[ENCOUNTER_1_NAME]"
+                                loading="lazy"
+                            />
+                            <div class="encounter-overlay">
+                                <div class="encounter-number">1</div>
+                            </div>
+                        </div>
+                        <div class="encounter-content">
+                            <h2>[ENCOUNTER_1_NAME]</h2>
+                            <div class="encounter-tags">
+                                <span class="tag">Opening</span>
+                                <span class="tag">[MECHANIC_TYPE]</span>
+                            </div>
+                            <p>[ENCOUNTER_1_DESCRIPTION]</p>
+                            <ul class="encounter-details">
+                                <li>[KEY_MECHANIC_1]</li>
+                                <li>[KEY_MECHANIC_2]</li>
+                                <li>[KEY_MECHANIC_3]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- First Encounter -->
+                    <div class="encounter-card">
+                        <div class="encounter-image">
+                            <img
+                                src="[ENCOUNTER_2_IMAGE]"
+                                alt="[ENCOUNTER_2_NAME]"
+                                loading="lazy"
+                            />
+                            <div class="encounter-overlay">
+                                <div class="encounter-number">2</div>
+                            </div>
+                        </div>
+                        <div class="encounter-content">
+                            <h2>[ENCOUNTER_2_NAME]</h2>
+                            <div class="encounter-tags">
+                                <span class="tag">Boss Fight</span>
+                                <span class="tag">[MECHANIC_TYPE]</span>
+                            </div>
+                            <p>[ENCOUNTER_2_DESCRIPTION]</p>
+                            <ul class="encounter-details">
+                                <li>[KEY_MECHANIC_1]</li>
+                                <li>[KEY_MECHANIC_2]</li>
+                                <li>[KEY_MECHANIC_3]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Second Encounter -->
+                    <div class="encounter-card">
+                        <div class="encounter-image">
+                            <img
+                                src="[ENCOUNTER_3_IMAGE]"
+                                alt="[ENCOUNTER_3_NAME]"
+                                loading="lazy"
+                            />
+                            <div class="encounter-overlay">
+                                <div class="encounter-number">3</div>
+                            </div>
+                        </div>
+                        <div class="encounter-content">
+                            <h2>[ENCOUNTER_3_NAME]</h2>
+                            <div class="encounter-tags">
+                                <span class="tag">Mechanics</span>
+                                <span class="tag">[MECHANIC_TYPE]</span>
+                            </div>
+                            <p>[ENCOUNTER_3_DESCRIPTION]</p>
+                            <ul class="encounter-details">
+                                <li>[KEY_MECHANIC_1]</li>
+                                <li>[KEY_MECHANIC_2]</li>
+                                <li>[KEY_MECHANIC_3]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Final Boss -->
+                    <div class="encounter-card">
+                        <div class="encounter-image">
+                            <img
+                                src="[FINAL_BOSS_IMAGE]"
+                                alt="[FINAL_BOSS_NAME]"
+                                loading="lazy"
+                            />
+                            <div class="encounter-overlay">
+                                <div class="encounter-number">4</div>
+                            </div>
+                        </div>
+                        <div class="encounter-content">
+                            <h2>[FINAL_BOSS_NAME]</h2>
+                            <div class="encounter-tags">
+                                <span class="tag">Final Boss</span>
+                                <span class="tag">Complex</span>
+                            </div>
+                            <p>[FINAL_BOSS_DESCRIPTION]</p>
+                            <ul class="encounter-details">
+                                <li>[KEY_MECHANIC_1]</li>
+                                <li>[KEY_MECHANIC_2]</li>
+                                <li>[KEY_MECHANIC_3]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Triumphs Section -->
+            <section class="triumph-section">
+                <h2 class="section-title">Triumphs & Challenges</h2>
+
+                <div class="content-grid">
+                    <div class="encounter-card">
+                        <div class="encounter-content">
+                            <h2>[TRIUMPH_1_NAME]</h2>
+                            <div class="encounter-tags">
+                                <span class="tag">Triumph</span>
+                                <span class="tag">[DIFFICULTY_LEVEL]</span>
+                            </div>
+                            <p>[TRIUMPH_1_DESCRIPTION]</p>
+                            <ul class="encounter-details">
+                                <li>[REQUIREMENT_1]</li>
+                                <li>[REQUIREMENT_2]</li>
+                                <li>[REQUIREMENT_3]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="encounter-card">
+                        <div class="encounter-content">
+                            <h2>[TRIUMPH_2_NAME]</h2>
+                            <div class="encounter-tags">
+                                <span class="tag">Challenge</span>
+                                <span class="tag">[DIFFICULTY_LEVEL]</span>
+                            </div>
+                            <p>[TRIUMPH_2_DESCRIPTION]</p>
+                            <ul class="encounter-details">
+                                <li>[REQUIREMENT_1]</li>
+                                <li>[REQUIREMENT_2]</li>
+                                <li>[REQUIREMENT_3]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="encounter-card">
+                        <div class="encounter-content">
+                            <h2>[TRIUMPH_3_NAME]</h2>
+                            <div class="encounter-tags">
+                                <span class="tag">Secret</span>
+                                <span class="tag">Hidden</span>
+                            </div>
+                            <p>[TRIUMPH_3_DESCRIPTION]</p>
+                            <ul class="encounter-details">
+                                <li>[REQUIREMENT_1]</li>
+                                <li>[REQUIREMENT_2]</li>
+                                <li>[REQUIREMENT_3]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loot Section -->
+            <section class="loot-section">
+                <h2 class="section-title">Raid Loot</h2>
+
+                <div class="loot-grid">
+                    <div class="loot-item">
+                        <img src="[WEAPON_1_ICON]" alt="[WEAPON_1_NAME]" />
+                        <h3>[WEAPON_1_NAME]</h3>
+                        <p>[WEAPON_1_TYPE]</p>
+                    </div>
+
+                    <div class="loot-item">
+                        <img src="[WEAPON_2_ICON]" alt="[WEAPON_2_NAME]" />
+                        <h3>[WEAPON_2_NAME]</h3>
+                        <p>[WEAPON_2_TYPE]</p>
+                    </div>
+
+                    <div class="loot-item">
+                        <img src="[ARMOR_SET_ICON]" alt="[ARMOR_SET_NAME]" />
+                        <h3>[ARMOR_SET_NAME]</h3>
+                        <p>Armor Set</p>
+                    </div>
+
+                    <div class="loot-item">
+                        <img src="[EXOTIC_ICON]" alt="[EXOTIC_NAME]" />
+                        <h3>[EXOTIC_NAME]</h3>
+                        <p>Exotic [EXOTIC_TYPE]</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Author: <span id="author">Arm's Raid Group</span></p>
+            <p>Version: <span id="version">2.0</span></p>
+            <p>Guide for [RAID_NAME] - Last Updated: [LAST_UPDATED]</p>
+        </footer>
+
+        <script>
+            // Load version info if available
+            document.addEventListener("DOMContentLoaded", function () {
+                if (typeof version !== "undefined") {
+                    document.getElementById("version").textContent = version;
+                }
+                if (typeof author !== "undefined") {
+                    document.getElementById("author").textContent = author;
+                }
+            });
+        </script>
+    </body>
+</html>

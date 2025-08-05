@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+        <!-- Variables Section - EDIT THIS SECTION FOR EACH RAID -->
+        <script>
+            // RAID CONFIGURATION - Update this section for each new raid guide
+            const RAID_CONFIG = {
+                // Basic Raid Info
+                name: "King's Fall",
+                tagline: "Face the Taken King in his throne world",
+                powerLevel: "1770",
+                length: "2-4 hours",
+                difficulty: "Hard",
+                lastUpdated: "January 2025",
+                backgroundImage:
+                    "/assets/backgrounds/kings-fall-background.webp",
+
+                // Encounters
+                encounters: [
+                    {
+                        name: "Tomb Ship Jumping Puzzle",
+                        image: "/assets/images/Kingsfall/2022_KingsFall_Raid_Press_Kit_Raid_Large_003.jpg",
+                        description:
+                            "Navigate through the jumping puzzle using tomb ships and platforms while avoiding death barriers.",
+                        tags: ["Opening", "Platforming"],
+                        mechanics: [
+                            "Jump between tomb ships in sequence",
+                            "Avoid invisible death barriers",
+                            "Time movements with ship rotations",
+                        ],
+                    },
+                    {
+                        name: "The Warpriest",
+                        image: "/assets/images/Kingsfall/2022_KingsFall_Raid_Press_Kit_Bosses_Large_006.jpg",
+                        description:
+                            "Defeat the Warpriest by managing the Aura of the Initiate and destroying his protective totems.",
+                        tags: ["Boss Fight", "DPS"],
+                        mechanics: [
+                            "Kill right-side knight for Aura",
+                            "Destroy glyphs in correct sequence",
+                            "Stand in aura during damage phase",
+                        ],
+                    },
+                    {
+                        name: "Golgoroth",
+                        image: "/assets/images/Kingsfall/2022_KingsFall_Raid_Press_Kit_Bosses_Large_003.jpg",
+                        description:
+                            "Battle Golgoroth using his own gaze against him while managing orb mechanics and adds.",
+                        tags: ["Mechanics", "Coordination"],
+                        mechanics: [
+                            "Shoot Golgoroth's back to get gaze",
+                            "Pop orbs for damage buff pool",
+                            "Rotate gaze between players",
+                        ],
+                    },
+                    {
+                        name: "Oryx, The Taken King",
+                        image: "/assets/images/Kingsfall/2022_KingsFall_Raid_Press_Kit_Oryx_Compressed_003.jpg",
+                        description:
+                            "The final confrontation with Oryx requires perfect coordination of platforms, ogres, and light-eater knights.",
+                        tags: ["Final Boss", "Complex"],
+                        mechanics: [
+                            "Run platforms in correct sequence",
+                            "Kill ogres and light-eater knights",
+                            "Detonate corrupted light orbs",
+                        ],
+                    },
+                ],
+
+                // Triumphs
+                triumphs: [
+                    {
+                        name: "Pitch Perfect",
+                        difficulty: "Hard",
+                        description:
+                            "Complete the raid without anyone dying during any encounter.",
+                        type: "Triumph",
+                        requirements: [
+                            "No deaths during encounters",
+                            "Jumping puzzle deaths are allowed",
+                            "All 6 players must survive each fight",
+                        ],
+                    },
+                    {
+                        name: "Challenge Mode: Brand Claimer",
+                        difficulty: "Expert",
+                        description:
+                            "Complete the Warpriest encounter while a different player holds the Brand each damage phase.",
+                        type: "Challenge",
+                        requirements: [
+                            "Different player gets aura each phase",
+                            "Complete in 3 damage phases maximum",
+                            "No player can die with the aura",
+                        ],
+                    },
+                    {
+                        name: "Dreadnaught Secrets",
+                        difficulty: "Medium",
+                        description:
+                            "Discover and activate all hidden collectibles throughout the raid.",
+                        type: "Secret",
+                        requirements: [
+                            "Find all calcified fragments",
+                            "Activate mysterious runes",
+                            "Complete hidden chest sequence",
+                        ],
+                    },
+                ],
+
+                // Loot
+                loot: [
+                    {
+                        name: "Touch of Malice",
+                        type: "Exotic Scout Rifle",
+                        icon: "/assets/images/Kingsfall/",
+                    },
+                    {
+                        name: "Defiance of Yasmin",
+                        type: "Legendary Sniper Rifle",
+                        icon: "/assets/images/Kingsfall/",
+                    },
+                    {
+                        name: "Harrowed Armor Set",
+                        type: "Armor Set",
+                        icon: "/assets/images/Kingsfall/",
+                    },
+                    {
+                        name: "Kingslayer Shell",
+                        type: "Exotic Ghost Shell",
+                        icon: "/assets/images/Kingsfall/",
+                    },
+                ],
+            };
+        </script>
+
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="author" content="Arm's Raid Group" />
+
+        <link rel="shortcut icon" href="../assets/raidicon.png" />
+        <title>Panoptes Raid Guide</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="/styles/styles.css" />
+
+        <style>
+            /* Additional styles specific to raid guide pages */
+            .raid-hero {
+                position: relative;
+                height: 60vh;
+                background:
+                    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+                    url("../assets/default-raid-bg.jpg") center/cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                overflow: hidden;
+            }
+
+            .raid-hero::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+                opacity: 0.3;
+            }
+
+            .raid-hero-content {
+                position: relative;
+                z-index: 2;
+                max-width: 800px;
+                padding: 2rem;
+            }
+
+            .raid-hero h1 {
+                font-size: clamp(3rem, 8vw, 5rem);
+                margin-bottom: 1rem;
+                text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+                color: var(--accent-gold);
+            }
+
+            .raid-hero .tagline {
+                font-size: clamp(1.2rem, 3vw, 1.8rem);
+                margin-bottom: 2rem;
+                opacity: 0.9;
+                font-weight: 300;
+            }
+
+            .raid-info {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            .info-item {
+                background: rgba(0, 0, 0, 0.7);
+                padding: 1rem;
+                border-radius: 10px;
+                text-align: center;
+                border: 1px solid var(--border-color);
+            }
+
+            .info-item h3 {
+                color: var(--accent-gold);
+                margin-bottom: 0.5rem;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+
+            .info-item p {
+                margin: 0;
+                font-weight: 500;
+            }
+
+            .content-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 2rem;
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
+
+            .encounter-card {
+                background: var(--secondary-bg);
+                border-radius: 15px;
+                overflow: hidden;
+                border: 1px solid var(--border-color);
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
+
+            .encounter-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+                border-color: var(--accent-gold);
+            }
+
+            .encounter-image {
+                position: relative;
+                height: 200px;
+                overflow: hidden;
+            }
+
+            .encounter-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            .encounter-card:hover .encounter-image img {
+                transform: scale(1.05);
+            }
+
+            .encounter-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(
+                    45deg,
+                    rgba(0, 0, 0, 0.3),
+                    transparent 70%
+                );
+                display: flex;
+                align-items: flex-end;
+                padding: 1rem;
+            }
+
+            .encounter-number {
+                background: var(--accent-gold);
+                color: var(--primary-bg);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 1.2rem;
+            }
+
+            .encounter-content {
+                padding: 1.5rem;
+            }
+
+            .encounter-content h2 {
+                color: var(--accent-gold);
+                margin-bottom: 1rem;
+                font-size: 1.5rem;
+            }
+
+            .encounter-content p {
+                margin-bottom: 1rem;
+                line-height: 1.6;
+                opacity: 0.9;
+            }
+
+            .encounter-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .tag {
+                background: rgba(244, 208, 63, 0.2);
+                color: var(--accent-gold);
+                padding: 0.3rem 0.8rem;
+                border-radius: 20px;
+                font-size: 0.8rem;
+                font-weight: 500;
+                border: 1px solid rgba(244, 208, 63, 0.3);
+            }
+
+            .encounter-details {
+                list-style: none;
+                padding: 0;
+            }
+
+            .encounter-details li {
+                padding: 0.5rem 0;
+                border-bottom: 1px solid var(--border-color);
+                display: flex;
+                align-items: center;
+            }
+
+            .encounter-details li:last-child {
+                border-bottom: none;
+            }
+
+            .encounter-details li::before {
+                content: "→";
+                color: var(--accent-gold);
+                font-weight: bold;
+                margin-right: 0.5rem;
+            }
+
+            .section-title {
+                text-align: center;
+                font-size: 2.5rem;
+                color: var(--accent-gold);
+                margin: 3rem 0 2rem 0;
+                position: relative;
+            }
+
+            .section-title::after {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 3px;
+                background: var(--accent-gold);
+                margin: 1rem auto;
+                border-radius: 2px;
+            }
+
+            .triumph-section {
+                background: var(--secondary-bg);
+                margin: 4rem -2rem;
+                padding: 3rem 2rem;
+                border-top: 1px solid var(--border-color);
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .loot-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .loot-item {
+                background: var(--secondary-bg);
+                border-radius: 10px;
+                padding: 1.5rem;
+                border: 1px solid var(--border-color);
+                text-align: center;
+                transition: all 0.3s ease;
+            }
+
+            .loot-item:hover {
+                border-color: var(--accent-gold);
+                transform: translateY(-2px);
+            }
+
+            .loot-item img {
+                width: 64px;
+                height: 64px;
+                margin-bottom: 1rem;
+                border-radius: 8px;
+            }
+
+            .back-button {
+                position: fixed;
+                top: 100px;
+                left: 2rem;
+                background: rgba(26, 31, 46, 0.9);
+                color: var(--text-primary);
+                padding: 0.8rem 1.2rem;
+                border-radius: 25px;
+                text-decoration: none;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                border: 1px solid var(--border-color);
+                backdrop-filter: blur(10px);
+                z-index: 100;
+            }
+
+            .back-button:hover {
+                background: var(--accent-gold);
+                color: var(--primary-bg);
+                transform: translateX(-5px);
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .content-grid {
+                    grid-template-columns: 1fr;
+                    padding: 1rem;
+                }
+
+                .raid-hero {
+                    height: 40vh;
+                }
+
+                .raid-info {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .back-button {
+                    position: static;
+                    display: inline-block;
+                    margin: 1rem;
+                }
+
+                .triumph-section {
+                    margin: 2rem -1rem;
+                    padding: 2rem 1rem;
+                }
+            }
+        </style>
+
+        <!-- Scripts -->
+        <script src="/scripts/version.js" defer></script>
+        <script src="/scripts/navigation.js" defer></script>
+    </head>
+
+    <body>
+        <!-- Back Button -->
+        <a href="/index.html" class="back-button">← Back to Raids</a>
+
+        <!-- Navigation -->
+        <nav class="topnav" role="navigation" aria-label="Main navigation">
+            <a href="/index.html">Home</a>
+            <a href="/pages/Contact.html">Contact</a>
+            <a href="/pages/help.html">Help</a>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <header class="raid-hero">
+                <div class="raid-hero-content">
+                    <h1 id="raid-name">Loading...</h1>
+                    <p class="tagline" id="raid-tagline">Loading...</p>
+
+                    <div class="raid-info">
+                        <div class="info-item">
+                            <h3>Players</h3>
+                            <p>6</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Power Level</h3>
+                            <p id="power-level">Loading...</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Length</h3>
+                            <p id="raid-length">Loading...</p>
+                        </div>
+                        <div class="info-item">
+                            <h3>Difficulty</h3>
+                            <p id="difficulty">Loading...</p>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Encounters Section -->
+            <section class="encounters-section">
+                <h2 class="section-title">Encounters</h2>
+                <div class="content-grid" id="encounters-container">
+                    <!-- Encounters will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Triumphs Section -->
+            <section class="triumph-section">
+                <h2 class="section-title">Triumphs & Challenges</h2>
+                <div class="content-grid" id="triumphs-container">
+                    <!-- Triumphs will be populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Loot Section -->
+            <section class="loot-section">
+                <h2 class="section-title">Raid Loot</h2>
+                <div class="loot-grid" id="loot-container">
+                    <!-- Loot will be populated by JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>Author: <span id="author">Arm's Raid Group</span></p>
+            <p>Version: <span id="version">2.0</span></p>
+            <p>
+                Guide for <span id="footer-raid-name"></span> - Last Updated:
+                <span id="last-updated"></span>
+            </p>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Update page title and meta tags
+                document.title = `${RAID_CONFIG.name} - Panoptes Raid Guide`;
+                document
+                    .querySelector('meta[name="description"]')
+                    .setAttribute(
+                        "content",
+                        `Complete guide for ${RAID_CONFIG.name} raid in Destiny 2. Encounter strategies, triumph requirements, and loot information.`,
+                    );
+                document
+                    .querySelector('meta[name="keywords"]')
+                    .setAttribute(
+                        "content",
+                        `Destiny 2, ${RAID_CONFIG.name}, raid guide, encounters, triumphs, loot`,
+                    );
+
+                // Update hero section background
+                const heroElement = document.querySelector(".raid-hero");
+                heroElement.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("${RAID_CONFIG.backgroundImage}")`;
+
+                // Populate basic raid info
+                document.getElementById("raid-name").textContent =
+                    RAID_CONFIG.name;
+                document.getElementById("raid-tagline").textContent =
+                    RAID_CONFIG.tagline;
+                document.getElementById("power-level").textContent =
+                    RAID_CONFIG.powerLevel;
+                document.getElementById("raid-length").textContent =
+                    RAID_CONFIG.length;
+                document.getElementById("difficulty").textContent =
+                    RAID_CONFIG.difficulty;
+                document.getElementById("footer-raid-name").textContent =
+                    RAID_CONFIG.name;
+                document.getElementById("last-updated").textContent =
+                    RAID_CONFIG.lastUpdated;
+
+                // Populate encounters
+                const encountersContainer = document.getElementById(
+                    "encounters-container",
+                );
+                RAID_CONFIG.encounters.forEach((encounter, index) => {
+                    const encounterCard = document.createElement("div");
+                    encounterCard.className = "encounter-card";
+                    encounterCard.innerHTML = `
+                        <div class="encounter-image">
+                            <img src="${encounter.image}" alt="${encounter.name}" loading="lazy" />
+                            <div class="encounter-overlay">
+                                <div class="encounter-number">${index + 1}</div>
+                            </div>
+                        </div>
+                        <div class="encounter-content">
+                            <h2>${encounter.name}</h2>
+                            <div class="encounter-tags">
+                                ${encounter.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
+                            </div>
+                            <p>${encounter.description}</p>
+                            <ul class="encounter-details">
+                                ${encounter.mechanics.map((mechanic) => `<li>${mechanic}</li>`).join("")}
+                            </ul>
+                        </div>
+                    `;
+                    encountersContainer.appendChild(encounterCard);
+                });
+
+                // Populate triumphs
+                const triumphsContainer =
+                    document.getElementById("triumphs-container");
+                RAID_CONFIG.triumphs.forEach((triumph) => {
+                    const triumphCard = document.createElement("div");
+                    triumphCard.className = "encounter-card";
+                    triumphCard.innerHTML = `
+                        <div class="encounter-content">
+                            <h2>${triumph.name}</h2>
+                            <div class="encounter-tags">
+                                <span class="tag">${triumph.type}</span>
+                                <span class="tag">${triumph.difficulty}</span>
+                            </div>
+                            <p>${triumph.description}</p>
+                            <ul class="encounter-details">
+                                ${triumph.requirements.map((req) => `<li>${req}</li>`).join("")}
+                            </ul>
+                        </div>
+                    `;
+                    triumphsContainer.appendChild(triumphCard);
+                });
+
+                // Populate loot
+                const lootContainer = document.getElementById("loot-container");
+                RAID_CONFIG.loot.forEach((item) => {
+                    const lootItem = document.createElement("div");
+                    lootItem.className = "loot-item";
+                    lootItem.innerHTML = `
+                        <img src="${item.icon}" alt="${item.name}" />
+                        <h3>${item.name}</h3>
+                        <p>${item.type}</p>
+                    `;
+                    lootContainer.appendChild(lootItem);
+                });
+
+                // Load version info if available
+                if (typeof version !== "undefined") {
+                    document.getElementById("version").textContent = version;
+                }
+                if (typeof author !== "undefined") {
+                    document.getElementById("author").textContent = author;
+                }
+            });
+        </script>
+    </body>
+</html>

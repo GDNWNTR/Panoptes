@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="shortcut icon" href="./assets/raidicon.png" />
+  <title>Panoptes Raid Guides - Contact</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="version.js"></script>
+  <script src="stickytopnav.js"></script>
+</head>
+
+<body>
+
+  <div class="topnav">
+    <a href="./index.html">Home</a>
+    <a href="./tableocontents.html">Table of Contents</a>
+    <a class="active" href="./Contact.html">Contact</a>
+    <a href="./help.html">Help</a>
+  </div>
+
+  <div>
+    <h3>
+      Join our Discord!
+    </h3>
+    <p>
+      Here you can get help or suggest features!
+    </p>
+    <iframe src="https://discord.com/widget?id=1124341763788783708&theme=dark" width="350" height="500"
+      allowtransparency="true" frameborder="0"
+      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </div>
+
+  <footer>
+    <p>Author: <span id="author"></span></p>
+    <p>Version: <span id="version"></span></p>
+    <!-- <a href="mailto:Website@d2raidguide.com">Email the Webmaster</a></p> -->
+  </footer>
+  <script>
+    document.getElementById("version").textContent = version;
+    document.getElementById("author").textContent = author;
+  </script>
+
+</html>

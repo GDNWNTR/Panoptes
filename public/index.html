@@ -1,228 +1,699 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US" dir="ltr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link
+            rel="shortcut icon"
+            href="assets/icons/8b1bfd1c1ce1cab51d23c78235a6e067.png"
+        />
+        <title>Panoptes Raid Guides</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            :root {
+                --primary-bg: #0a0e1a;
+                --secondary-bg: #1a1f2e;
+                --accent-gold: #f4d03f;
+                --accent-blue: #3498db;
+                --text-primary: #ffffff;
+                --text-secondary: #bdc3c7;
+                --card-hover: #252a3a;
+                --border-color: #34495e;
+                --gradient-primary: linear-gradient(
+                    135deg,
+                    #667eea 0%,
+                    #764ba2 100%
+                );
+                --gradient-secondary: linear-gradient(
+                    135deg,
+                    #f093fb 0%,
+                    #f5576c 100%
+                );
+            }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="shortcut icon" href="./assets/raidicon.png" />
-  <title>Panoptes Raid Guides</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
-  <script src="version.js"></script>
-  <script src="stickytopnav.js"></script>
-  <link rel="stylesheet" href="styles.css">
-</head>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-<body>
-  <div class="topnav">
-    <!-- <a  href="#home">
-       <img src="./assets/raidicon.png" alt="Logo"
-    </a>-->
-    <a class="active" href="./index.html">Home</a>
-    <a href="./tableocontents.html">Table of Contents</a>
-    <a href="./Contact.html">Contact</a>
-    <a href="./help.html">Help</a>
-  </div>
+            body {
+                font-family: "Space Grotesk", sans-serif;
+                background: var(--primary-bg);
+                color: var(--text-primary);
+                line-height: 1.6;
+                overflow-x: hidden;
+            }
 
-  <div>
-    <h1>Panoptes</h1>
-    <h3>by Arm's Raid Group</h3>
-  </div>
+            /* Navigation */
+            .topnav {
+                position: sticky;
+                top: 0;
+                background: rgba(26, 31, 46, 0.95);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid var(--border-color);
+                padding: 0;
+                z-index: 1000;
+                transition: all 0.3s ease;
+            }
 
-  <!-- Salvation's Edge-->
-  <a href="./Raid Guides/SE.html" class="container">
-    <img src="./assets/SE/Raid/2024_Salvation_s_Edge_Raid_Post_Launch_Press_Kit_Raid_LARGE_010.jpg" alt="Image 1" class="bottom-image">
-    <img src="./assets/SE/DestinyMilestoneDefinition_329a6f8ba06cf48f5831b92c7777b16b.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Salvation's Edge</h1>
-        <p>Free the Light.</p>
-      </div>
-    </div>
-  </a>
+            .topnav a {
+                display: inline-block;
+                color: var(--text-secondary);
+                text-decoration: none;
+                padding: 1rem 1.5rem;
+                transition: all 0.3s ease;
+                position: relative;
+                font-weight: 500;
+            }
 
-  <!-- Crota's End-->
-  <a href="./Raid Guides/CrotasEnd.html" class="container">
-    <img src="./assets/CE/2023_Crotas_End_Press_Kit_Teaser_Image_Large_4K.jpg" alt="Image 1" class="bottom-image">
-    <img src="./assets/CE/CrotasEnd_Raid.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Crota's End</h1>
-        <p>He waits in the dark below.</p>
-      </div>
-    </div>
-  </a>
+            .topnav a:hover,
+            .topnav a.active {
+                color: var(--accent-gold);
+                background: rgba(244, 208, 63, 0.1);
+            }
 
+            .topnav a::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: var(--accent-gold);
+                transition: all 0.3s ease;
+                transform: translateX(-50%);
+            }
 
-  <!-- Root of Nightmares-->
-  <a href="./Raid Guides/RON.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_root_of_nightmares.jpg" alt="Image 1"
-      class="bottom-image">
-    <img src="./assets/RON/RootofNightmares_Raid.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Root of Nightmares</h1>
-        <p>A sinister threat has taken root.</p>
-      </div>
-    </div>
-  </a>
+            .topnav a:hover::after,
+            .topnav a.active::after {
+                width: 80%;
+            }
 
-  <!-- Vow of the Disciple-->
-  <a href="./Raid Guides/VoD.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_nemesis.jpg" alt="Image 1" class="bottom-image">
-    <img src="./assets/VOD/VowoftheDisciple_Raid.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Vow of the Disciple</h1>
-        <p>The disciple beckons...</p>
-      </div>
-    </div>
-  </a>
+            /* Hero Section */
+            .hero {
+                text-align: center;
+                padding: 4rem 2rem;
+                background: var(--gradient-primary);
+                position: relative;
+                overflow: hidden;
+            }
 
-  <!-- King's Fall-->
-  <a href="./Raid Guides/KF.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_kings_fall.jpg" alt="Image 1" class="bottom-image">
-    <img src="./assets/KF/KingsFall_Raid.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>King's Fall</h1>
-        <p>Long live the King.</p>
-      </div>
-    </div>
+            .hero::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+                opacity: 0.3;
+            }
 
-  </a>
+            .hero h1 {
+                font-size: clamp(3rem, 8vw, 6rem);
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                position: relative;
+                z-index: 1;
+            }
 
-  <!-- Vault of Glass-->
-  <a href="./Raid Guides/vogguide.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/vault_of_glass.jpg" alt="Image 1" class="bottom-image">
-    <img src="./assets/VOG/VaultofGlass_Raid.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Vault of Glass</h1>
-        <p>Beneath Venus, evil stirs.</p>
-      </div>
-    </div>
-  </a>
+            .hero h3 {
+                font-size: clamp(1.2rem, 3vw, 1.8rem);
+                font-weight: 300;
+                opacity: 0.9;
+                position: relative;
+                z-index: 1;
+            }
 
-  <!-- Deep Stone Crypt-->
-  <a href="./Raid Guides/DSC.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/europa-raid-deep-stone-crypt.jpg" alt="Image 1"
-      class="bottom-image">
-    <img src="./assets/DSC/DeepStoneCrypt_Raid.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Deep Stone Crypt</h1>
-        <p>The chains of legacy must be broken.</p>
-      </div>
-    </div>
-  </a>
+            /* Main Content */
+            .main-content {
+                max-width: 1400px;
+                margin: 0 auto;
+                padding: 2rem;
+            }
 
-  <!-- Garden of Salvation-->
-  <a href="./Raid Guides/GOS.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_garden_of_salvation.jpg" alt="Image 1"
-      class="bottom-image">
-    <img src="./assets/GOS/GardenofSalvation_Raid.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Garden of Salvation</h1>
-        <p>The Garden calls out to you.</p>
-      </div>
-    </div>
-  </a>
+            .section-title {
+                font-size: 2.5rem;
+                text-align: center;
+                margin: 3rem 0 2rem 0;
+                color: var(--accent-gold);
+                position: relative;
+            }
 
-  <!-- Last Wish -->
-  <a href="./Raid Guides/LW.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_beanstalk.jpg" alt="Image 1" class="bottom-image">
-    <img src="./assets/LW/LastWish_Raid.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Last Wish</h1>
-        <p>The opportunity of a lifetime.</p>
-      </div>
-    </div>
-  </a>
+            .section-title::after {
+                content: "";
+                display: block;
+                width: 100px;
+                height: 3px;
+                background: var(--accent-gold);
+                margin: 1rem auto;
+                border-radius: 2px;
+            }
 
+            /* Raid Grid */
+            .raid-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 2rem;
+                margin-bottom: 4rem;
+            }
 
-<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            /* Raid Cards */
+            .raid-card {
+                position: relative;
+                height: 250px;
+                border-radius: 15px;
+                overflow: hidden;
+                text-decoration: none;
+                color: inherit;
+                transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+                border: 1px solid var(--border-color);
+            }
 
-  <h1>Sunset Raids</h1>
-  <!-- Crown of Sorrow-->
-  <a href="./Raid Guides/COS.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_eclipse.jpg" alt="Image 1" class="bottom-image">
-    <img src="./assets/COS/CrownofSorrow_Raid_icon.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Crown of Sorrow</h1>
-        <p>Grow Weak with Pride</p>
-      </div>
-    </div>
-  </a>
+            .raid-card:hover {
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+                border-color: var(--accent-gold);
+            }
 
-  <!-- Scourge of the Past-->
-  <a href="./Raid Guides/SOTP.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/raids.1305rh0093145r13t5hn10tnz.raid_sunset.jpg"
-      alt="Image 1" class="bottom-image">
-    <img src="./assets/HubrisofNiobe.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Scourge of the Past</h1>
-        <p>Beneath the ruins of the Last City lies the Black Armory's
-          most precious vault, now under siege by Siviks and his crew,
-          the Kell's Scourge.</p>
-      </div>
-    </div>
-  </a>
+            .raid-card .background-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: all 0.4s ease;
+                filter: brightness(0.7);
+            }
 
-  <!-- Spire of Stars-->
-  <a href="./Raid Guides/SOS.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_greed.jpg" alt="Image 1" class="bottom-image">
-    <img src="./assets/Leviathan/LEV_Raids.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Spire of Stars</h1>
-        <p>On the wings of Icarus.</p>
-      </div>
-    </div>
-  </a>
+            .raid-card:hover .background-image {
+                transform: scale(1.1);
+                filter: brightness(0.5);
+            }
 
-  <!-- Eater of Worlds-->
-  <a href="./Raid Guides/EOW.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/raids_leviathan_eater_of_worlds.jpg" alt="Image 1"
-      class="bottom-image">
-    <img src="./assets/Leviathan/LEV_Raids.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Eater of Worlds</h1>
-        <p>In the belly of the beast.</p>
-      </div>
-    </div>
-  </a>
+            .raid-card .logo-image {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                width: 60px;
+                height: 60px;
+                object-fit: contain;
+                opacity: 0.9;
+                transition: all 0.3s ease;
+            }
 
-  <!-- Leviathan-->
-  <a href="./Raid Guides/LEV.html" class="container">
-    <img src="https://www.bungie.net/img/destiny_content/pgcr/raid_gluttony.jpg" alt="Image 1" class="bottom-image">
-    <img src="./assets/Leviathan/LEV_Raids.png" alt="Image 2" class="top-image">
-    <div class="imagetext">
-      <div class="content">
-        <h1>Leviathan</h1>
-        <p>Grow fat from strength.</p>
-      </div>
-    </div>
-  </a>
+            .raid-card:hover .logo-image {
+                opacity: 1;
+                transform: scale(1.1);
+            }
 
-  <!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
-  
-  <footer>
-    <p>Author: <span id="author"></span></p>
-    <p>Version: <span id="version"></span></p>
-    <!-- <a href="mailto:Website@d2raidguide.com">Email the Webmaster</a></p> -->
-  </footer>
-  <script>
-    document.getElementById("version").textContent = version;
-    document.getElementById("author").textContent = author;
-  </script>
+            .raid-card .content {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                padding: 1.5rem;
+                background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+                transform: translateY(0);
+                transition: all 0.3s ease;
+            }
 
-</body>
+            .raid-card .content h2 {
+                font-size: 1.8rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                color: var(--accent-gold);
+            }
 
+            .raid-card .content p {
+                font-size: 0.95rem;
+                opacity: 0.9;
+                line-height: 1.4;
+            }
+
+            /* Sunset Section */
+            .sunset-section {
+                background: var(--secondary-bg);
+                margin: 4rem -2rem;
+                padding: 3rem 2rem;
+                border-top: 1px solid var(--border-color);
+                border-bottom: 1px solid var(--border-color);
+            }
+
+            .sunset-section .section-title {
+                color: var(--text-secondary);
+            }
+
+            .sunset-section .section-title::after {
+                background: var(--text-secondary);
+            }
+
+            .sunset-section .raid-card {
+                opacity: 0.8;
+                filter: grayscale(0.3);
+            }
+
+            .sunset-section .raid-card:hover {
+                opacity: 1;
+                filter: grayscale(0);
+            }
+
+            /* Footer */
+            footer {
+                background: var(--secondary-bg);
+                text-align: center;
+                padding: 2rem;
+                margin-top: 3rem;
+                border-top: 1px solid var(--border-color);
+                color: var(--text-secondary);
+            }
+
+            footer p {
+                margin: 0.5rem 0;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .raid-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1.5rem;
+                }
+
+                .main-content {
+                    padding: 1rem;
+                }
+
+                .topnav a {
+                    padding: 0.8rem 1rem;
+                    font-size: 0.9rem;
+                }
+
+                .hero {
+                    padding: 2rem 1rem;
+                }
+            }
+
+            /* Loading Animation */
+            .raid-card {
+                animation: fadeInUp 0.6s ease-out forwards;
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            .raid-card:nth-child(1) {
+                animation-delay: 0.1s;
+            }
+            .raid-card:nth-child(2) {
+                animation-delay: 0.2s;
+            }
+            .raid-card:nth-child(3) {
+                animation-delay: 0.3s;
+            }
+            .raid-card:nth-child(4) {
+                animation-delay: 0.4s;
+            }
+            .raid-card:nth-child(5) {
+                animation-delay: 0.5s;
+            }
+            .raid-card:nth-child(6) {
+                animation-delay: 0.6s;
+            }
+            .raid-card:nth-child(7) {
+                animation-delay: 0.7s;
+            }
+            .raid-card:nth-child(8) {
+                animation-delay: 0.8s;
+            }
+
+            @keyframes fadeInUp {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <nav class="topnav" id="topnav">
+            <a class="active" href="./index.html">Home</a>
+            <a href="/pages/Contact.html">Contact</a>
+            <a href="./help.html">Help</a>
+        </nav>
+
+        <header class="hero">
+            <h1>Panoptes</h1>
+            <h3>by Arm's Raid Group</h3>
+        </header>
+
+        <main class="main-content">
+            <section class="active-raids">
+                <div class="raid-grid">
+                    <!-- Crota's End -->
+                    <a
+                        href="pages/raid-guides/CrotasEnd.html"
+                        class="raid-card"
+                    >
+                        <img
+                            src="assets/backgrounds/crotas-end-background.jpg"
+                            alt="Crota's End Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="/assets/icons/CrotasEnd_Raid.png"
+                            alt="Crota's End Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Crota's End</h2>
+                            <p>He waits in the dark below.</p>
+                        </div>
+                    </a>
+
+                    <!-- Root of Nightmares -->
+                    <a href="pages/raid-guides/RON.html" class="raid-card">
+                        <img
+                            src="assets/backgrounds/root-of-nightmares-background.jpg"
+                            alt="Root of Nightmares Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/RootofNightmares_Raid.png"
+                            alt="Root of Nightmares Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Root of Nightmares</h2>
+                            <p>A sinister threat has taken root.</p>
+                        </div>
+                    </a>
+
+                    <!-- Vow of the Disciple -->
+                    <a href="pages/raid-guides/VoD.html" class="raid-card">
+                        <img
+                            src="https://www.bungie.net/img/destiny_content/pgcr/raid_nemesis.jpg"
+                            alt="Vow of the Disciple Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/VowoftheDisciple_Raid.png"
+                            alt="Vow of the Disciple Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Vow of the Disciple</h2>
+                            <p>The disciple beckons...</p>
+                        </div>
+                    </a>
+
+                    <!-- King's Fall -->
+                    <a
+                        href="/pages/raid-guides/KingsFall.html"
+                        class="raid-card"
+                    >
+                        <img
+                            src="https://www.bungie.net/img/destiny_content/pgcr/raid_kings_fall.jpg"
+                            alt="King's Fall Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/KingsFall_Raid.png"
+                            alt="King's Fall Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>King's Fall</h2>
+                            <p>Long live the King.</p>
+                        </div>
+                    </a>
+
+                    <!-- Vault of Glass -->
+                    <a
+                        href="/pages/raid-guides/vogguide.html"
+                        class="raid-card"
+                    >
+                        <img
+                            src="https://www.bungie.net/img/destiny_content/pgcr/vault_of_glass.jpg"
+                            alt="Vault of Glass Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/VaultofGlass_Raid.png"
+                            alt="Vault of Glass Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Vault of Glass</h2>
+                            <p>Beneath Venus, evil stirs.</p>
+                        </div>
+                    </a>
+
+                    <!-- Deep Stone Crypt -->
+                    <a href="pages/raid-guides/DSC.html" class="raid-card">
+                        <img
+                            src="https://www.bungie.net/img/destiny_content/pgcr/europa-raid-deep-stone-crypt.jpg"
+                            alt="Deep Stone Crypt Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/DeepStoneCrypt_Raid.png"
+                            alt="Deep Stone Crypt Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Deep Stone Crypt</h2>
+                            <p>The chains of legacy must be broken.</p>
+                        </div>
+                    </a>
+
+                    <!-- Garden of Salvation -->
+                    <a href="/pages/raid-guides/GOS.html" class="raid-card">
+                        <img
+                            src="https://www.bungie.net/img/destiny_content/pgcr/raid_garden_of_salvation.jpg"
+                            alt="Garden of Salvation Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/GardenofSalvation_Raid.png"
+                            alt="Garden of Salvation Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Garden of Salvation</h2>
+                            <p>The Garden calls out to you.</p>
+                        </div>
+                    </a>
+
+                    <!-- Last Wish -->
+                    <a
+                        href="/pages/raid-guides/LastWish.html"
+                        class="raid-card"
+                    >
+                        <img
+                            src="assets/backgrounds/Last-Wish-background.jpg"
+                            alt="Last Wish Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/LastWish_Raid.png"
+                            alt="Last Wish Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Last Wish</h2>
+                            <p>The opportunity of a lifetime.</p>
+                        </div>
+                    </a>
+
+                    <!-- Salvation's Edge -->
+                    <a
+                        href="pages/raid-guides/SalvationsEdge.html"
+                        class="raid-card"
+                    >
+                        <img
+                            src="assets/backgrounds/salvations-edge-background.jpg"
+                            alt="Salvation's Edge Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/SalvationsEdge_Raid"
+                            alt="Salvation's Edge Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Salvation's Edge</h2>
+                            <p>Stand at the edge of salvation.</p>
+                        </div>
+                    </a>
+
+                    <!-- Desert Perpetual -->
+                    <a
+                        href="pages/raid-guides/DesertPerpetual.html"
+                        class="raid-card"
+                    >
+                        <img
+                            src="assets/backgrounds/Desert-Perpetual-background.jpg"
+                            alt="Desert Perpetual Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/DesertPerpetural_raid.png"
+                            alt="Desert Perpetual Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Desert Perpetual</h2>
+                            <p>Lost in the endless sands of time.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="sunset-section">
+                <h2 class="section-title">Sunset Raids</h2>
+                <div class="raid-grid">
+                    <!-- Crown of Sorrow -->
+                    <a
+                        href="pages/raid-guides/old-raids/COS.html"
+                        class="raid-card"
+                    >
+                        <img
+                            src="https://www.bungie.net/img/destiny_content/pgcr/raid_eclipse.jpg"
+                            alt="Crown of Sorrow Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/LEV_Raids.png"
+                            alt="Crown of Sorrow Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Crown of Sorrow</h2>
+                            <p>Grow Weak with Pride</p>
+                        </div>
+                    </a>
+
+                    <!-- Scourge of the Past -->
+                    <a
+                        href="pages/raid-guides/old-raids/SOTP.html"
+                        class="raid-card"
+                    >
+                        <img
+                            src="https://www.bungie.net/img/destiny_content/pgcr/raids.1305rh0093145r13t5hn10tnz.raid_sunset.jpg"
+                            alt="Scourge of the Past Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/"
+                            alt="Scourge of the Past Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Scourge of the Past</h2>
+                            <p>
+                                Beneath the ruins of the Last City lies the
+                                Black Armory's most precious vault.
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Spire of Stars -->
+                    <a
+                        href="pages/raid-guides/old-raids/SOS.html"
+                        class="raid-card"
+                    >
+                        <img
+                            src="https://www.bungie.net/img/destiny_content/pgcr/raid_greed.jpg"
+                            alt="Spire of Stars Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/LEV_Raids.png"
+                            alt="Spire of Stars Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Spire of Stars</h2>
+                            <p>On the wings of Icarus.</p>
+                        </div>
+                    </a>
+
+                    <!-- Eater of Worlds -->
+                    <a href="./Raid Guides/EOW.html" class="raid-card">
+                        <img
+                            src="https://www.bungie.net/img/destiny_content/pgcr/raids_leviathan_eater_of_worlds.jpg"
+                            alt="Eater of Worlds Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/LEV_Raids.png"
+                            alt="Eater of Worlds Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Eater of Worlds</h2>
+                            <p>In the belly of the beast.</p>
+                        </div>
+                    </a>
+
+                    <!-- Leviathan -->
+                    <a
+                        href="pages/raid-guides/old-raids/LEV.html"
+                        class="raid-card"
+                    >
+                        <img
+                            src="https://www.bungie.net/img/destiny_content/pgcr/raid_gluttony.jpg"
+                            alt="Leviathan Background"
+                            class="background-image"
+                        />
+                        <img
+                            src="assets/icons/LEV_Raids.png"
+                            alt="Leviathan Logo"
+                            class="logo-image"
+                        />
+                        <div class="content">
+                            <h2>Leviathan</h2>
+                            <p>Grow fat from strength.</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Author: <span id="author">Arm's Raid Group</span></p>
+            <p>Version: <span id="version">2.0</span></p>
+        </footer>
+
+        <script>
+            // Sticky navigation
+            window.addEventListener("scroll", function () {
+                const nav = document.getElementById("topnav");
+                if (window.scrollY > 50) {
+                    nav.style.background = "rgba(26, 31, 46, 0.98)";
+                } else {
+                    nav.style.background = "rgba(26, 31, 46, 0.95)";
+                }
+            });
+
+            // Load version info if available
+            document.addEventListener("DOMContentLoaded", function () {
+                if (typeof version !== "undefined") {
+                    document.getElementById("version").textContent = version;
+                }
+                if (typeof author !== "undefined") {
+                    document.getElementById("author").textContent = author;
+                }
+            });
+        </script>
+    </body>
 </html>
